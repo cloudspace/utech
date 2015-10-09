@@ -13,123 +13,129 @@
 */
 
 html, body {
-  font-family: 'futura';
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 30px;
   color: #666666;
 }
 
-
 h1 {
   font-size: 48px;
-  line-height: 60px;
+  font-weight: 900;
+  line-height: 96px;
   text-transform: uppercase;
 }
-
 
 h2 {
   font-size: 36px;
-  line-height: 48px;
+  font-weight: 900;
+  line-height: 72px;
   text-transform: uppercase;
 }
-
 
 h3 {
   font-size: 22px;
-  line-height: 36px;
+  font-weight: 700;
+  line-height: 44px;
   text-transform: uppercase;
 }
-
 
 a {
   text-decoration: none;
   color: #2164AF;
 }
 
-
 header {
   position: relative;
   z-index: 100;
 }
+
 header h1 {
+  height: 200px;
   background-image: url('../images/logo.png');
   background-repeat: no-repeat;
   background-position: center;
   background-size: 600px;
-  height: 200px;
 }
+
 header h1 span{
   visibility: hidden;
 }
+
 header h2 {
   padding: 20px;
   background-color: #2164AF;
   box-shadow: 0px 0px 5px #111111;
+  font-size: 16px;
   text-align: center;
   text-transform: uppercase;
-  font-size: 16px;
   color: #FFFFFF;
 }
-
 
 section, footer {
   padding: 50px;
   text-align: center;
 }
+
 section img, section iframe, footer img, iframe {
   margin-top: 50px;
 }
-
 
 section.about {
   box-shadow: 0px 0px 5px #111111;
   background-color: #009FDD;
   color: #FFFFFF;
 }
+
 section.about ul li {
   display: inline-block;
-  text-transform: uppercase;
   margin: 0px 50px;
+  text-transform: uppercase;
 }
+
 section.about ul li p {
   margin-top: 30px;
+  font-weight: 900;
 }
+
 section.about ul li .icon {
-  background-repeat: no-repeat;
-  background-position: center;
   padding: 100px;
   border: solid 10px #FFFFFF;
   border-radius: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 section.about ul li.code .icon {
   background-image: url('../images/code.png');
 }
+
 section.about ul li.learn .icon {
   background-image: url('../images/learn.png');
 }
+
 section.about ul li.network .icon {
   background-image: url('../images/network.png');
 }
 
-
 section.talks {
   background-color: #EEEEEE;
 }
+
 section.talks p {
   width: 66%;
   margin: 0 auto;
 }
+
 section.talks img {
   width: 300px;
   border-radius: 300px;
 }
 
-
 section.last-talk {
   background-color: #111111;
   color: #FFFFFF;
 }
-
 
 footer {
   box-shadow: 0px 0px 5px #111111;
@@ -139,68 +145,66 @@ footer {
   background-color: #2164AF;
   color: #FFFFFF;
 }
+
 footer a {
   color: #FFFFFF;
 }
 
-
-.meetup-button {
-  position: absolute;
+.button {
   display: inline-block;
-  top: 20px;
-  right: 20px;
-  background-color: #E51937;
-  color: #FFFFFF;
   padding: 20px;
   border-radius: 5px;
-  border-bottom: solid 5px #EA485E;
+  font-weight: 900;
+  color: #FFFFFF;
   transition: 0.4s background-color;
 }
-.meetup-button:hover {
+
+.button.-meetup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border-bottom: solid 5px #EA485E;
+  background-color: #E51937;
+}
+
+.button.-meetup:hover {
   background-color: #EA485E;
 }
 
-
 .video-container {
-    position: relative;
-    padding-bottom: 56.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
-}
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    box-shadow: 0px 0px 10px #000000;
-    position: absolute;
-    left: 12%;
-    width: 75%;
-    height: 75%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px; height: 0; overflow: hidden;
 }
 
-
+.video-container iframe {
+  position: absolute;
+  left: 12%;
+  width: 75%;
+  height: 75%;
+  box-shadow: 0px 0px 10px #000000;
+}
 
 @media (max-width: 1090px) {
   section.about ul li {
     margin: 0px 20px;
   }
+
   section.about ul li .icon {
-    border: solid 5px #FFFFFF;
     padding: 50px;
+    border: solid 5px #FFFFFF;
     background-size: 100px;
   }
 
-  .meetup-button {
+  .button.-meetup {
     display: block;
     position: static;
+    border-radius: 0;
     text-align: center;
   }
 }
 
-
 @media (max-width: 800px) {
-  html, body {
-    line-height: 30px;
-  }
-
   h1 {
     font-size: 36px;
     line-height: 48px;
@@ -220,9 +224,10 @@ footer a {
   }
 
   header h1 {
-    background-size: 300px;
     height: 150px;
+    background-size: 300px;
   }
+
   header h2 {
     font-size: 12px;
   }
