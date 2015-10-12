@@ -128,7 +128,7 @@ section.talks p {
 }
 
 section.talks img {
-  max-width: 300px;
+  width: 300px;
   border-radius: 300px;
 }
 
@@ -239,6 +239,10 @@ footer a {
   section.talks p {
     width: 95%;
     margin: 0 auto;
+  }
+
+  section.talks img {
+    width: 200px;
   }
 
   .video-container iframe {
